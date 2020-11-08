@@ -1,0 +1,526 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}Hello IndexController!{% endblock %}
+
+{% block content %}
+    <main id="main" class="site-main page-order">
+        <span class="l-horizontal"><span></span><span></span></span>
+        <!-- lines -->
+
+        <!-- ORDER FORM WRAPPER -->
+        <section class="order-form-wrapper">
+
+            <div class="container">
+
+                <h2>Molimo vas da popunite obavezna polja (*)</h2>
+
+                <div class="order-form order-form-web">
+
+{#                    {{ form(form) }}#}
+
+
+
+{#                    <form class="clear" id="form-web">#}
+
+                        {{ form_start(form, {'method': 'POST', 'class' : "clear"}) }}
+
+                        <div class="form-top">
+                            <div class="form-field half-width full-name-field">
+                                <input type='hidden' value="sr" name="len" />
+{#                                <input type="text" name="name" id="web-name" required maxlength="30">#}
+                                {{ form_widget(form.name) }}
+{#                                <label for="name">Ime i prezime *</label>#}
+                                {{ form_label(form.name, null, {
+                                    'label': 'Your name *',
+                                    'label_attr': {'class': 'foo'}
+                                }) }}
+                                <span class="invalid-input-msg">{{ form_errors(form.name) }}</span>
+                            </div>
+                            <div class="form-field half-width company-field">
+                                {{ form_widget(form.companyName) }}
+{#                                <label for="web-company">Kompanija</label>#}
+                                {{ form_label(form.companyName, null, {
+                                    'label': 'Company name'
+                                }) }}
+                                <span class="invalid-input-msg">{{ form_errors(form.companyName) }}</span>
+                            </div>
+                            <div class="form-field half-width email-field">
+                                {{ form_widget(form.email) }}
+{#                                <label for="web-email">E-mail *</label>#}
+                                {{ form_label(form.email, null, {
+                                    'label': 'E-mail *'
+                                }) }}
+                                <span class="invalid-input-msg">{{ form_errors(form.email) }}</span>
+                            </div>
+                            <div class="form-field half-width telefon-field">
+                                {{ form_widget(form.phoneNumber) }}
+{#                                <label for="web-telefon">Telefon</label>#}
+                                {{ form_label(form.phoneNumber, null, {
+                                    'label': 'Phone number'
+                                }) }}
+                            </div>
+                            <span class="invalid-input-msg">{{ form_errors(form.phoneNumber) }}</span>
+                        </div>
+
+
+                        <div class="form-field full-width website-field">
+                            {{ form_widget(form.website) }}
+                            {{ form_label(form.website, null, {
+                                'label': 'Website'
+                            }) }}
+                            <span class="invalid-input-msg">{{ form_errors(form.website) }}</span>
+                        </div>
+                        <div class="form-field one-third-width has-hosting-field">
+                            <input type="checkbox" name="web-has-hosting" id="web-has-hosting" value="Posedujem">
+                            <label for="web-has-hosting">
+                                Posedujem web hosting
+                                <span class="fake-check-wrapper">
+								<span class="fake-checkmark icon-check"></span>
+							</span>
+                            </label>
+                        </div>
+                        <div class="form-field one-third-width has-domain-field">
+                            <input type="checkbox" name="web-has-domain" id="web-has-domain" value="Posedujem">
+                            <label for="web-has-domain">
+                                Posedujem domen ime
+                                <span class="fake-check-wrapper">
+								<span class="fake-checkmark icon-check"></span>
+							</span>
+                            </label>
+                        </div>
+                        <div class="form-field one-third-width domain-name-field">
+                            <input type="text" name="web-domain-name" id="web-domain-name">
+                            <label for="web-domain-name">Unesite Vaš domen</label>
+                        </div>
+                        <div class="form-field edit-text-field two-third-width">
+                            <p>Da li posle dizajna i procesa programiranja funkcionalnosti, pre puštanja sajta online, sadržaj (tekst, slike, proizvode) unosimo mi (PopArt)?:</p>
+                        </div>
+                        <div class="form-field one-third-width edit-answer-field">
+                                {% for child in form.publishAfterDone %}
+                                <div class="half-width top-sec-min">
+                                            <input type="radio" id="{{ child.vars.id }}" name="{{ form.vars.id ~ '[' ~ form.publishAfterDone.vars.name ~ ']' }}" required="required" value="{{ child.vars.label }}">
+                                            {{ child.vars.label }}
+                                        <label for="edit-answer-field-1">
+                                            {{ child.vars.label }}
+                                            <span class="fake-check-wrapper">
+									<span class="fake-checkmark icon-check"></span>
+								</span>
+                                        </label>
+                                    </div>
+                                {% endfor %}
+                        </div>
+                        <div class="form-field full-width language-field">
+                            <label for="language">Na koliko jezika bi bio sajt?</label>
+                            <input type="number" name="language" id="language" min="1" value="1">
+                        </div>
+                        <div class="form-field full-width message-field">
+                            <label for="web-message">Koje su stavke u navigaciji (stranice), koje su željene funkcionalnosti, da li postoji dizajn koji Vam se dopada i zašto? <br> Što preciznije opišete projekat ponuda će biti kompletnija.</label>
+                            <textarea name="web-message" id="web-message" required></textarea>
+                            <span class="invalid-input-msg">Ovo polje je obavezno.</span>
+                        </div>
+                        <div class="form-field full-width favorite-websites-wraper">
+                            <div class="all-favorite-websites">
+                                <div class="form-field full-width favorite-website-field">
+                                    <input type="text" name="favorite-website[]" id="favorite-website" class="favorite-website">
+                                    <label for="favorite-website">Unesite link sajta koji Vam se sviđa</label>
+                                </div>
+                            </div>
+                            <div class="form-field one-third-width add-favorite-website-field">
+                                <a class="popart-btn popart-fill-btn add-favorite-website-field-btn" href="javascript:;">+ DODAJ LINK</a>
+                            </div>
+                        </div>
+                        <div class="form-field half-width budget-field form-holder">
+                            <label>Budžet</label>
+                            <span class="fake-input fake-select">
+							<span class="icon-keyboard_arrow_down input-icon"></span>
+							<span class="fake-select-text nothing-selected" data-fakeval="null"></span>
+							<input class="budget-hidden-input" type="hidden" name="budget" value="0">
+							<span class="fake-options">
+								<span class="f-opt">800 - 1500€</span>
+								<span class="f-opt">1500 - 3000€</span>
+								<span class="f-opt">3000 - 5000€</span>
+								<span class="f-opt">5000 - 10000€</span>
+								<span class="f-opt">10000 - 20000€</span>
+								<span class="f-opt">20000€+</span>
+							</span>
+						</span>
+                        </div>
+
+                        <div class="form-field half-width form-holder order-norobot-field">
+                            <div class="form-field full-width order-norobot">
+                                <input id="order-privacy-web" type="checkbox" name="order-privacy-web">
+                                <label for="order-privacy-web" class="fake-checkbox"><span class="icon-cross icon-cross-web-privacy"></span><span class="privacy-form-link">Slažem se sa <br> <a href="politika-privatnosti.html" target="_blank">politikom privatnosti</a>.</span></label>
+                            </div>
+                        </div>
+
+                        <div class="form-field full-width submit-form-field">
+                            <button type="submit" id="web_submit" class="popart-btn order-submit-btn">Pošalji</button>
+                        </div>
+
+                        <div id="web-form-response" class="form-field full-width notification-field">
+                            <p class="notification-message"></p>
+                        </div>
+                    {{ form_end(form) }}
+                </div>
+                <!-- END OF ORDER FORM WRAPPER -->
+
+                <div class="order-form order-form-graphic">
+                    <form class="clear" id="form-graphic">
+                        <div class="form-top">
+                            <div class="form-field half-width full-name-field">
+                                <input type='hidden' value="sr" name="len" />
+                                <input type="text" name="graphic-name" id="graphic-name" required>
+                                <label for="graphic-name">Ime i prezime *</label>
+                                <span class="invalid-input-msg">Ovo polje je obavezno.</span>
+                            </div>
+                            <div class="form-field half-width company-field">
+                                <input type="text" name="graphic-company" id="graphic-company">
+                                <label for="graphic-company">Kompanija</label>
+                            </div>
+                            <div class="form-field half-width email-field">
+                                <input type="email" name="graphic-email" id="graphic-email" required>
+                                <label for="graphic-email">E-mail *</label>
+                                <span class="invalid-input-msg">Email adresa nije validna.</span>
+                            </div>
+                            <div class="form-field half-width telefon-field">
+                                <input type="text" name="graphic-telefon" id="graphic-telefon">
+                                <label for="graphic-telefon">Telefon</label>
+                            </div>
+
+                        </div>
+                        <div class="form-field full-width website-field">
+                            <input type="text" name="graphic-website" id="graphic-website">
+                            <label for="graphic-website">Websajt</label>
+                        </div>
+
+                        <div class="form-field full-width service-field-wrapper form-holder">
+                            <div class="form-field full-width service-trigger">
+                                <label>Potreban vam je grafički dizajn sledećeg proizvoda</label>
+
+                                <div class="triger-single-options">
+                                    <span class="icon-keyboard_arrow_down input-icon"></span>
+                                    <input type="text" class="input-trigger" readonly required>
+                                    <div class="form-field full-width service-options">
+
+                                        <div class="form-field full-width service-single-option">
+                                            <input type="checkbox" name="service-single[]" id="service-1" value="Logotip / Logo">
+                                            <label for="service-1">
+                                                Logotip / Logo
+                                                <span class="fake-check-wrapper">
+                        <span class="fake-checkmark icon-check"></span>
+                      </span>
+                                            </label>
+                                        </div>
+
+                                        <div class="form-field full-width service-single-option">
+                                            <input type="checkbox" name="service-single[]" id="service-2" value="Vizit Kartica">
+                                            <label for="service-2">
+                                                Vizit Kartica
+                                                <span class="fake-check-wrapper">
+                        <span class="fake-checkmark icon-check"></span>
+                      </span>
+                                            </label>
+                                        </div>
+
+                                        <div class="form-field full-width service-single-option">
+                                            <input type="checkbox" name="service-single[]" id="service-3" value="Memorandum">
+                                            <label for="service-3">
+                                                Memorandum
+                                                <span class="fake-check-wrapper">
+                        <span class="fake-checkmark icon-check"></span>
+                      </span>
+                                            </label>
+                                        </div>
+
+                                        <div class="form-field full-width service-single-option">
+                                            <input type="checkbox" name="service-single[]" id="service-4" value="Korporativni identitet firme (logo, vizit karta, memorandum, koverta)">
+                                            <label for="service-4">
+                                                Korporativni identitet firme (logo, vizit karta, memorandum, koverta)
+                                                <span class="fake-check-wrapper">
+                        <span class="fake-checkmark icon-check"></span>
+                      </span>
+                                            </label>
+                                        </div>
+
+                                        <div class="form-field full-width service-single-option">
+                                            <input type="checkbox" name="service-single[]" id="service-12" value="Knjiga grafičkih standarda">
+                                            <label for="service-12">
+                                                Knjiga grafičkih standarda
+                                                <span class="fake-check-wrapper">
+                        <span class="fake-checkmark icon-check"></span>
+                      </span>
+                                            </label>
+                                        </div>
+
+                                        <div class="form-field full-width service-single-option">
+                                            <input type="checkbox" name="service-single[]" id="service-16" value="Etiketa">
+                                            <label for="service-16">
+                                                Etiketa
+                                                <span class="fake-check-wrapper">
+                        <span class="fake-checkmark icon-check"></span>
+                      </span>
+                                            </label>
+                                        </div>
+
+                                        <div class="form-field full-width service-single-option">
+                                            <input type="checkbox" name="service-single[]" id="service-17" value="Ambalaža">
+                                            <label for="service-17">
+                                                Ambalaža
+                                                <span class="fake-check-wrapper">
+                        <span class="fake-checkmark icon-check"></span>
+                      </span>
+                                            </label>
+                                        </div>
+
+                                        <div class="form-field full-width service-single-option">
+                                            <input type="checkbox" name="service-single[]" id="service-5" value="Flajer">
+                                            <label for="service-5">
+                                                Flajer
+                                                <span class="fake-check-wrapper">
+                        <span class="fake-checkmark icon-check"></span>
+                      </span>
+                                            </label>
+                                        </div>
+
+                                        <div class="form-field full-width service-single-option">
+                                            <input type="checkbox" name="service-single[]" id="service-6" value="Plakat">
+                                            <label for="service-6">
+                                                Plakat
+                                                <span class="fake-check-wrapper">
+                        <span class="fake-checkmark icon-check"></span>
+                      </span>
+                                            </label>
+                                        </div>
+
+                                        <div class="form-field full-width service-single-option">
+                                            <input type="checkbox" name="service-single[]" id="service-7" value="Bilbord">
+                                            <label for="service-7">
+                                                Bilbord
+                                                <span class="fake-check-wrapper">
+                        <span class="fake-checkmark icon-check"></span>
+                      </span>
+                                            </label>
+                                        </div>
+
+                                        <div class="form-field full-width service-single-option">
+                                            <input type="checkbox" name="service-single[]" id="service-8" value="Brošura">
+                                            <label for="service-8">
+                                                Brošura
+                                                <span class="fake-check-wrapper">
+                        <span class="fake-checkmark icon-check"></span>
+                      </span>
+                                            </label>
+                                        </div>
+
+                                        <div class="form-field full-width service-single-option">
+                                            <input type="checkbox" name="service-single[]" id="service-10" value="Katalog">
+                                            <label for="service-10">
+                                                Katalog
+                                                <span class="fake-check-wrapper">
+                        <span class="fake-checkmark icon-check"></span>
+                      </span>
+                                            </label>
+                                        </div>
+
+                                        <div class="form-field full-width service-single-option">
+                                            <input type="checkbox" name="service-single[]" id="service-11" value="Omot knjige">
+                                            <label for="service-11">
+                                                Omot knjige
+                                                <span class="fake-check-wrapper">
+                        <span class="fake-checkmark icon-check"></span>
+                      </span>
+                                            </label>
+                                        </div>
+
+                                        <div class="form-field full-width service-single-option">
+                                            <input type="checkbox" name="service-single[]" id="service-14" value="Aplikacija za majicu">
+                                            <label for="service-14">
+                                                Aplikacija za majicu
+                                                <span class="fake-check-wrapper">
+                        <span class="fake-checkmark icon-check"></span>
+                      </span>
+                                            </label>
+                                        </div>
+
+                                        <div class="form-field full-width service-single-option">
+                                            <input type="checkbox" name="service-single[]" id="service-15" value="Meni (jelovnik, karta pića...)">
+                                            <label for="service-15">
+                                                Meni (jelovnik, karta pića...)
+                                                <span class="fake-check-wrapper">
+                        <span class="fake-checkmark icon-check"></span>
+                      </span>
+                                            </label>
+                                        </div>
+
+                                        <div class="form-field full-width service-single-option">
+                                            <input type="checkbox" name="service-single[]" id="service-18" value="Drugo (dizajn vreće, tašne, notesa i dr.)">
+                                            <label for="service-18">
+                                                Drugo (dizajn vreće, tašne, notesa i dr.)
+                                                <span class="fake-check-wrapper">
+                        <span class="fake-checkmark icon-check"></span>
+                      </span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-field full-width message-field">
+                            <label for="graphic-message">Dodatne informacije / Kratak opis željene usluge</label>
+                            <textarea name="graphic-message" id="graphic-message" required></textarea>
+                            <span class="invalid-input-msg">Ovo polje je obavezno.</span>
+                        </div>
+
+
+                        <div class="form-field half-width budget-field form-holder">
+                            <label>Budžet</label>
+                            <span class="fake-input fake-select">
+							<span class="icon-keyboard_arrow_down input-icon"></span>
+              <span class="fake-select-text nothing-selected" data-fakeval="null"></span>
+              <input class="budget-hidden-input" type="hidden" name="budget" value="0">
+							<span class="fake-options">
+								<span class="f-opt">50 - 500€</span>
+								<span class="f-opt">500 - 1000€</span>
+								<span class="f-opt">1000 - 2000€</span>
+								<span class="f-opt">2000 - 5000€</span>
+								<span class="f-opt">5000 - 10000€</span>
+                <span class="f-opt">10000€ +</span>
+							</span>
+						</span>
+                        </div>
+
+                        <div class="form-field half-width form-holder order-norobot-field">
+                            <div class="form-field full-width order-norobot">
+                                <input id="order-privacy-graphic" type="checkbox" name="order-privacy-graphic">
+                                <label for="order-privacy-graphic" class="fake-checkbox"><span class="icon-cross icon-cross-graphic-privacy"></span><span class="privacy-form-link">Slažem se sa <br> <a href="politika-privatnosti.html" target="_blank">politikom privatnosti</a>.</span></label>
+                            </div>
+                        </div>
+
+                        <div class="form-field full-width submit-form-field">
+                            <button type="submit" id="graphic_submit" class="popart-btn order-submit-btn">Pošalji</button>
+                        </div>
+
+                        <div id="graphic-form-response" class="form-field full-width notification-field">
+                            <p class="notification-message"></p>
+                        </div>
+                    </form>
+                </div>
+                <!-- END OF ORDER FORM WRAPPER -->
+
+                <div class="order-form order-form-seo">
+                    <form class="clear" id="form-seo">
+                        <div class="form-top">
+                            <div class="form-field half-width full-name-field">
+                                <input type='hidden' value="sr" name="len" />
+                                <input type="text" name="seo-name" id="seo-name" required>
+                                <label for="seo-name">Ime i prezime *</label>
+                                <span class="invalid-input-msg">Ovo polje je obavezno.</span>
+                            </div>
+
+                            <div class="form-field half-width company-field">
+                                <input type="text" name="seo-company" id="seo-company">
+                                <label for="seo-company">Kompanija</label>
+                            </div>
+
+                            <div class="form-field half-width email-field">
+                                <input type="email" name="seo-email" id="seo-email" required>
+                                <label for="seo-email">E-mail *</label>
+                                <span class="invalid-input-msg">Email adresa nije validna.</span>
+                            </div>
+
+                            <div class="form-field half-width telefon-field">
+                                <input type="text" name="seo-telefon" id="seo-telefon">
+                                <label for="seo-telefon">Telefon</label>
+                            </div>
+                        </div>
+                        <div class="form-field full-width website-field">
+                            <input type="text" name="seo-website" id="seo-website" required>
+                            <label for="seo-website">Websajt</label>
+                            <span class="invalid-input-msg">Ovo polje je obavezno.</span>
+                        </div>
+
+                        <div class="form-field full-width keywords-field">
+                            <label for="keywords">Navedite za koje ključne reči/fraze se radi SEO</label>
+                            <textarea name="keywords" id="keywords"></textarea>
+                        </div>
+                        <div class="form-field full-width browser-support-field">
+                            <label for="browser-support">Koji pretraživači su Vam najvažni za poslovanje (google.com, google.rs, google.co.uk…)</label>
+                            <textarea name="browser-support" id="browser-support"></textarea>
+                        </div>
+                        <div class="form-field full-width message-field">
+                            <label for="seo-message">Dodatne informacije / Kratak opis željene usluge *</label>
+                            <textarea name="seo-message" id="seo-message" required></textarea>
+                            <span class="invalid-input-msg">Ovo polje je obavezno.</span>
+                        </div>
+
+                        <div class="form-field half-width budget-field form-holder">
+                            <label>Budžet</label>
+                            <span class="fake-input fake-select">
+        <span class="icon-keyboard_arrow_down input-icon"></span>
+        <span class="fake-select-text nothing-selected" data-fakeval="null"></span>
+        <input class="budget-hidden-input" type="hidden" name="budget" value="0">
+        <span class="fake-options">
+          <span class="f-opt">150 - 250€</span>
+          <span class="f-opt">250 - 500€</span>
+          <span class="f-opt">500 - 1000€</span>
+          <span class="f-opt">1000 - 2500€</span>
+          <span class="f-opt">2500 - 5000€</span>
+          <span class="f-opt">5000€ +</span>
+        </span>
+      </span>
+                        </div>
+
+                        <div class="form-field half-width form-holder order-norobot-field">
+                            <div class="form-field full-width order-norobot">
+                                <input id="order-privacy-seo" type="checkbox" name="order-privacy-seo">
+                                <label for="order-privacy-seo" class="fake-checkbox"><span class="icon-cross icon-cross-seo-privacy"></span><span class="privacy-form-link">Slažem se sa <br> <a href="politika-privatnosti.html" target="_blank">politikom privatnosti</a>.</span></label>
+                            </div>
+                        </div>
+
+                        <div class="form-field full-width submit-form-field">
+                            <button type="submit" id="seo_submit" class="popart-btn order-submit-btn">Pošalji</button>
+                        </div>
+
+                        <div id="seo-form-response" class="form-field full-width notification-field">
+                            <p class="notification-message"></p>
+                        </div>
+                    </form>
+                </div>
+                <!-- END OF ORDER FORM WRAPPER -->
+            </div>
+        </section>
+        <!-- END OF FORM ORDER WRAPPER -->
+    </main>
+{% endblock %}
+
+{% block banner %}
+    <div id="banner" class="page-banner page-order-banner">
+        <span class="lines l-header"></span>
+        <!-- lines -->
+        <span class="lines l-horizontal"><span></span><span></span></span>
+        <!-- lines -->
+        <div class="banner-object">
+            <img src="{{ asset('images/website/graphics/narucivanje-header.png') }}" alt="web dizajn narucivanje" width="960" height="654">
+        </div>
+        <div class="banner-inner container">
+            <div class="banner-caption">
+                <span class="bigletter animate-bigletter">N</span>
+                <h1><span class="rev-text temp-hide">Naručite uslugu</span></h1>
+                <h2><span class="rev-text-wrap"><span class="rev-text temp-hide" data-rev-delay="300">Biće nam zadovoljstvo da dugoročno sarađujemo i kreiramo </span></span><span class="rev-text-wrap"><span class="rev-text temp-hide" data-rev-delay="600">partnerske odnose.</span></span></h2>
+            </div>
+        </div>
+        <div class="info-buttons-wrapper narucivanje-info-buttons-wrapper clear">
+            <div class="container">
+                <button class="popart-btn popart-fill-btn popart-order-btn selected-btn" id="web" name="web-a">Web sajt</button>
+                <button class="popart-btn popart-fill-btn popart-order-btn" id="graphic">Grafički dizajn</button>
+                <button class="popart-btn popart-fill-btn popart-order-btn" id="seo">E-marketing</button>
+            </div>
+        </div>
+        <!-- #info-buttons -->
+    </div>
+{% endblock %}
+
+
+{% block newsletter %}
+
+{% endblock %}

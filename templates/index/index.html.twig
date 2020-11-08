@@ -1,0 +1,576 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}Hello IndexController!{% endblock %}
+
+{% block content %}
+    <main id="main" class="site-main">
+        <div id="scrollspy" class="ss-nav init-pos">
+            <span class="nav-border"></span>
+            <ul class="nav">
+                <li data-index="0"><a href="#homewebdesign"><span>01</span> Web <br>Design</a></li>
+                <li data-index="1"><a href="#homewebdev"><span>02</span> Web <br>Development</a></li>
+                <li data-index="2"><a href="#homegraphdesign"><span>03</span> Graphic <br>Design</a></li>
+                <li data-index="3"><a href="#homeseo"><span>04</span> Internet <br>Marketing</a></li>
+                <li data-index="4"><a href="#hsabout"><span>05</span> About <br>us</a></li>
+            </ul>
+        </div>
+
+        <section id="homewebdesign" class="home-webdesign page-section has-parallax scroll-show">
+            <div class="container">
+                <span class="bigletter animate-bigletter">W</span>
+                <div class="section-image parallax" data-offset="50" data-parallax-offset="-500">
+                    <picture>
+                        <source srcset="{{ asset('images/home/web/next-gen/webdesign.webp') }}" type="image/webp">
+                        <source srcset="{{ asset('images/home/web/webdesign.png') }}" type="image/png">
+                        <img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="{{ asset('images/home/web/webdesign.png') }}"
+                             alt="web design" width="695" height="438">
+                    </picture>
+                    <div class="pic-overlay">
+                        <picture>
+                            <source srcset="{{ asset('images/home/web/wd-over1.webp') }}" type="image/webp">
+                            <source srcset="{{ asset('images/home/web/wd-over1.jpg') }}" type="image/jpeg">
+                            <img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+                                 data-src="{{ asset('images/home/web/wd-over1.jpg') }}" alt="web design section overlay" class="parallax"
+                                 data-offset="150" width="212" height="75">
+                        </picture>
+                        <picture class="img-overlay">
+                            <source srcset="{{ asset('images/home/web/wd-over2.webp') }}" type="image/webp">
+                            <source srcset="{{ asset('images/home/web/wd-over2.jpg') }}" type="image/jpeg">
+                            <img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+                                 data-src="{{ asset('images/home/web/wd-over2.jpg') }}" alt="web design section overlay" class="parallax"
+                                 data-offset="250" width="195" height="307">
+                        </picture>
+                    </div>
+                </div>
+                <div class="section-content">
+                    <h2 class="section-title"><span class="rev-text temp-hide">Web design</span></h2>
+                    <p class="section-subtitle">
+                        <span class="rev-text temp-hide">Unique web design solutions made with love and in accordance with the newest technologies.</span>        </p>
+                    <p>
+                        <span class="rev-text temp-hide write-all">PopArt Studio is a full-service, interactive agency offering innovative web design & branding solutions which move the boundaries. Our sophisticated approach to the development of digital experiences exceeds all expectations.</span>        </p>
+                </div>
+                <div class="draggable-btn">
+                    <a class="x-btn load-cta" href="web-design-agency.html"
+                       title="Design and development of feature-rich websites"><span></span></a>
+                </div>
+            </div>
+        </section><!-- .page-section -->
+
+        <section id="homewebdev" class="home-webdevelopment page-section scroll-show">
+            <div class="container">
+                <span class="bigletter animate-bigletter">D</span>
+                <div class="section-content">
+                    <h2 class="section-title"><span class="rev-text temp-hide">Web development</span></h2>
+                    <p class="section-subtitle">
+                        <span class="rev-text temp-hide">We devote our undivided attention to writing every line of code, which is a proof of a well-defined methodology and impeccable reasoning.</span>        </p>
+                    <p>
+                        <span class="rev-text temp-hide write-all">Somewhere in between the Swiss watch and poetry, development is a vocation which generates quality websites, modern webshops, and unique web platforms. By using cutting-edge technologies, our programmers constantly develop their skills and follow modern web trends.</span>        </p>
+                    <p>
+                        <span class="rev-text temp-hide write-all">We can help you to choose adequate technologies for your web projects.</span>        </p>
+                </div>
+                <ul class="clear">
+                    <li>HTML5</li>
+                    <li>PHP</li>
+                    <li>WordPress</li>
+                    <li>CSS3</li>
+                    <li>MySQL</li>
+                    <li>Online Shops</li>
+                    <li>Sass</li>
+                    <li>Laravel</li>
+                    <li>Web applications</li>
+                    <li>JavaScript</li>
+                    <li>Symfony</li>
+                    <li>Custom solutions</li>
+                </ul>
+                <div class="draggable-btn">
+                    <a class="x-btn load-cta" href="web-development-serbia.html"
+                       title="Platform and app development"><span></span></a>
+                </div>
+            </div>
+        </section><!-- .page-section -->
+
+        <section id="homegraphdesign" class="home-graphicdesign has-parallax page-section scroll-show">
+            <div class="container">
+                <span class="bigletter animate-bigletter">G</span>
+
+                <div class="section-image">
+                    <div class="parallax" data-offset="50" data-parallax-offset="-500">
+                        <picture>
+                            <source srcset="{{ asset('images/home/graphic/full-graphic.webp') }}" type="image/webp">
+                            <source srcset="{{ asset('images/home/graphic/full-graphic.png') }}" type="image/png">
+                            <img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+                                 data-src="{{ asset('images/home/graphic/full-graphic.png') }}" alt="graficki elementi" class="abs-pos folder" width="592"
+                                 height="572">
+                        </picture>
+                    </div>
+                </div>
+
+
+                <div class="section-content">
+                    <h2 class="section-title"><span class="rev-text temp-hide">Graphic design</span></h2>
+                    <p class="section-subtitle"><span class="rev-text temp-hide">We can help you shape and build your brand.</span></p>
+                    <p>
+                        <span class="rev-text temp-hide write-all">By using appropriate and effective colors, we define your brand identity and create inspiring narratives which transmit the message and arouse emotions.</span>        </p>
+                    <p>
+                        <span class="rev-text temp-hide write-all">Memorable logo design, outstanding corporate identity and business-changing labels are only some of the solutions we offer. Ever since 2009, we are illustrating for brands, both big and small.</span>        </p>
+                </div>
+                <div class="draggable-btn">
+                    <a class="x-btn load-cta" href="graphic_design.html" title="Graphic design services"><span></span></a>
+                </div>
+            </div>
+        </section><!-- .page-section -->
+
+        <section id="homeseo" class="home-seo page-section scroll-show">
+            <!-- <img class="svg-lines" src="{{ asset('images/demo/svg-lines.png') }}" alt=""> -->
+            <div class="svg-lines">
+                <svg id="svg-line-1" viewBox="0 0 595.28 311.247">
+                    <path fill="none" stroke="#F7F9F9" stroke-width="8" stroke-linecap="round" stroke-miterlimit="10" d="M46.32,204.063
+					c0,0,36.917,50.084,106.167,48.584c0,0,28-0.5,47.75-27.5s41.75-106.5,82.5-106.5s53.5,18.25,78.5,46.75s48.75,41.25,69,40.25
+					s43-14.75,65.25-51.25s41-76,67-77" />
+                </svg>
+                <svg id="svg-line-2" viewBox="0 0 595.28 311.247">
+                    <path fill="none" stroke="#000" stroke-width="10" stroke-linecap="round" stroke-miterlimit="10" d="M64.76,248.274
+					c0,0,37.625,3.708,62.792-54.125c0,0,7.042-19.042,10.542-35.542s10.167-34.667,34.167-36c0,0,18.231-2.002,26.167,12.792
+					c7.375,13.75,33.542,69.333,52.25,96.375c5.572,8.054,16.25,24.375,42.75,24.375s40.441-22.008,45.875-32.875
+					c5.75-11.5,14.42-36.186,24.125-67.875c9.76-31.866,13.296-51.447,16.333-62.958c1.792-6.792,18.252-55.283,51.917-55.542
+					c32.5-0.25,44.62,32.288,49.125,40.625c7.542,13.958,22.625,45.5,42.75,62c13.2,10.823,32.875,12.583,48.375,10.75" />
+                </svg>
+                <svg id="svg-line-3" viewBox="0 0 595.28 311.247">
+                    <path fill="none" stroke="#FACD17" stroke-width="8" stroke-linecap="round" stroke-miterlimit="10" d="M64.76,248.274
+					c0,0,37.625,3.708,62.792-54.125c0,0,7.042-19.042,10.542-35.542s10.167-34.667,34.167-36c0,0,18.231-2.002,26.167,12.792
+					c7.375,13.75,33.542,69.333,52.25,96.375c5.572,8.054,16.25,24.375,42.75,24.375s40.441-22.008,45.875-32.875
+					c5.75-11.5,14.42-36.186,24.125-67.875c9.76-31.866,13.296-51.447,16.333-62.958c1.792-6.792,18.252-55.283,51.917-55.542
+					c32.5-0.25,44.62,32.288,49.125,40.625c7.542,13.958,22.625,45.5,42.75,62c13.2,10.823,32.875,12.583,48.375,10.75" />
+                </svg>
+                <div class="social-icons">
+        <span class="iw-facebook icon-wrapper social-icons--box">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+            <path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z" /></svg>
+        </span>
+                    <span class="iw-twitter icon-wrapper social-icons--box">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+            <path
+                    d="M32 7.075a12.941 12.941 0 0 1-3.769 1.031 6.601 6.601 0 0 0 2.887-3.631 13.21 13.21 0 0 1-4.169 1.594A6.565 6.565 0 0 0 22.155 4a6.563 6.563 0 0 0-6.563 6.563c0 .512.056 1.012.169 1.494A18.635 18.635 0 0 1 2.23 5.195a6.56 6.56 0 0 0-.887 3.3 6.557 6.557 0 0 0 2.919 5.463 6.565 6.565 0 0 1-2.975-.819v.081a6.565 6.565 0 0 0 5.269 6.437 6.574 6.574 0 0 1-2.968.112 6.588 6.588 0 0 0 6.131 4.563 13.17 13.17 0 0 1-9.725 2.719 18.568 18.568 0 0 0 10.069 2.95c12.075 0 18.681-10.006 18.681-18.681 0-.287-.006-.569-.019-.85A13.216 13.216 0 0 0 32 7.076z" />
+          </svg>
+        </span>
+                    <span class="iw-seo icon-wrapper social-icons--box"><span>seo</span></span>
+                    <span class="iw-linkedin icon-wrapper social-icons--box">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+            <path
+                    d="M12 12h5.535v2.837h.079c.77-1.381 2.655-2.837 5.464-2.837C28.92 12 30 15.637 30 20.367V30h-5.769v-8.54c0-2.037-.042-4.657-3.001-4.657-3.005 0-3.463 2.218-3.463 4.509V30H12V12zM2 12h6v18H2V12zm6-5a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+          </svg>
+        </span>
+                    <span class="iw-instagram icon-wrapper social-icons--box">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+            <path
+                    d="M16 2.881c4.275 0 4.781.019 6.462.094 1.563.069 2.406.331 2.969.55a4.952 4.952 0 0 1 1.837 1.194 5.015 5.015 0 0 1 1.2 1.838c.219.563.481 1.412.55 2.969.075 1.688.094 2.194.094 6.463s-.019 4.781-.094 6.463c-.069 1.563-.331 2.406-.55 2.969a4.94 4.94 0 0 1-1.194 1.837 5.02 5.02 0 0 1-1.837 1.2c-.563.219-1.413.481-2.969.55-1.688.075-2.194.094-6.463.094s-4.781-.019-6.463-.094c-1.563-.069-2.406-.331-2.969-.55a4.952 4.952 0 0 1-1.838-1.194 5.02 5.02 0 0 1-1.2-1.837c-.219-.563-.481-1.413-.55-2.969-.075-1.688-.094-2.194-.094-6.463s.019-4.781.094-6.463c.069-1.563.331-2.406.55-2.969a4.964 4.964 0 0 1 1.194-1.838 5.015 5.015 0 0 1 1.838-1.2c.563-.219 1.412-.481 2.969-.55 1.681-.075 2.188-.094 6.463-.094zM16 0c-4.344 0-4.887.019-6.594.094-1.7.075-2.869.35-3.881.744-1.056.412-1.95.956-2.837 1.85a7.833 7.833 0 0 0-1.85 2.831C.444 6.538.169 7.7.094 9.4.019 11.113 0 11.656 0 16s.019 4.887.094 6.594c.075 1.7.35 2.869.744 3.881.413 1.056.956 1.95 1.85 2.837a7.82 7.82 0 0 0 2.831 1.844c1.019.394 2.181.669 3.881.744 1.706.075 2.25.094 6.594.094s4.888-.019 6.594-.094c1.7-.075 2.869-.35 3.881-.744 1.05-.406 1.944-.956 2.831-1.844s1.438-1.781 1.844-2.831c.394-1.019.669-2.181.744-3.881.075-1.706.094-2.25.094-6.594s-.019-4.887-.094-6.594c-.075-1.7-.35-2.869-.744-3.881a7.506 7.506 0 0 0-1.831-2.844A7.82 7.82 0 0 0 26.482.843C25.463.449 24.301.174 22.601.099c-1.712-.081-2.256-.1-6.6-.1z" />
+            <path
+                    d="M16 7.781c-4.537 0-8.219 3.681-8.219 8.219s3.681 8.219 8.219 8.219 8.219-3.681 8.219-8.219A8.221 8.221 0 0 0 16 7.781zm0 13.55a5.331 5.331 0 1 1 0-10.663 5.331 5.331 0 0 1 0 10.663zM26.462 7.456a1.919 1.919 0 1 1-3.838 0 1.919 1.919 0 0 1 3.838 0z" />
+          </svg>
+        </span>
+                    <span class="iw-pinterest icon-wrapper social-icons--box">
+          <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0)">
+              <path
+                      d="M19.7826 2.5484C18.0568 0.89517 15.6777 -0.00805664 13.0729 -0.00805664C9.09709 -0.00805664 6.64548 1.62098 5.2987 2.99194C3.62935 4.67743 2.67773 6.91936 2.67773 9.12904C2.67773 11.9113 3.83903 14.0484 5.79064 14.8468C5.91967 14.9032 6.05677 14.9274 6.1858 14.9274C6.59709 14.9274 6.91967 14.6613 7.03257 14.2258C7.09709 13.9758 7.25032 13.371 7.31483 13.1048C7.45999 12.5807 7.33903 12.3307 7.03257 11.9677C6.46806 11.2984 6.20999 10.5081 6.20999 9.48388C6.20999 6.43549 8.48419 3.19356 12.6939 3.19356C16.0326 3.19356 18.1052 5.08872 18.1052 8.14517C18.1052 10.0726 17.6939 11.8629 16.9358 13.1694C16.4116 14.0807 15.4923 15.1694 14.0729 15.1694C13.46 15.1694 12.9116 14.9194 12.5648 14.4758C12.2342 14.0645 12.1293 13.5242 12.2584 12.9677C12.4035 12.3387 12.6132 11.6774 12.8068 11.0484C13.1616 9.8871 13.5003 8.79033 13.5003 7.91936C13.5003 6.41936 12.581 5.41936 11.21 5.41936C9.46806 5.41936 8.10515 7.18549 8.10515 9.44356C8.10515 10.5484 8.39548 11.379 8.53257 11.6936C8.31483 12.621 7.00838 18.1452 6.76644 19.1855C6.62128 19.7903 5.76644 24.5887 7.1858 24.9758C8.79064 25.3952 10.2261 20.7177 10.3713 20.1936C10.4923 19.7661 10.9035 18.1371 11.1535 17.1452C11.9277 17.8871 13.1697 18.3952 14.3793 18.3952C16.6616 18.3952 18.71 17.371 20.1535 15.5081C21.5568 13.7016 22.3229 11.1774 22.3229 8.4113C22.331 6.24194 21.3955 4.10485 19.7826 2.5484V2.5484Z"
+                      fill="#facc16" />
+            </g>
+            <defs>
+              <clipPath id="clip0">
+                <rect width="25" height="25" fill="white" />
+              </clipPath>
+            </defs>
+          </svg>
+
+        </span>
+                </div>
+            </div>
+            <div class="container">
+                <span class="bigletter animate-bigletter">S</span>
+                <div class="section-content">
+                    <h2 class="section-title"><span class="rev-text temp-hide">SEO optimization</span></h2>
+                    <p class="section-subtitle">
+                        <span class="rev-text temp-hide">We can help you build brand authority and visibility. You are only one click away from your target audience.</span>        </p>
+                    <p>
+                        <span class="rev-text temp-hide write-all">Our clients are one step ahead of their competitors because our digital marketing services help them empower their brands.</span>        </p>
+                    <p>
+                        <span class="rev-text temp-hide write-all">A comprehensive strategy which defines your online presence. Earn the highest positions in the SERP, bring more traffic to your website, give value to your followers and convert them into happy customers.</span>        </p>
+                    <picture>
+                        <source srcset="{{ asset('images/home/seo/next-gen/googlepartner.webp') }}" type="image/webp">
+                        <source srcset="{{ asset('images/home/seo/googlepartner.png') }}" type="image/png">
+                        <img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+                             data-src="{{ asset('images/home/seo/googlepartner.png') }}" alt="google partner" width="373" height="130">
+                    </picture>
+                </div>
+                <div class="draggable-btn">
+                    <a class="x-btn load-cta" href="search-engine-optimization.html" title="Website optimization"><span></span></a>
+                </div>
+            </div>
+        </section><!-- .page-section -->
+
+        <span class="l-horizontal"><span></span><span></span></span><!-- lines -->
+
+        <div id="homeslider" class="home-slider page-section">
+            <!-- .scroll - this class was here for some reason //test it wheather it's needed -->
+            <div id="homeslides-wrapp" class="home-slides-wrapper clear">
+                <section id="hsabout" class="hs-about home-slide scroll-show">
+                    <div id="home-slide-video" class="section-image">
+                        <picture>
+                            <source srcset="{{ asset('images/home/about/next-gen/home-aboutus.webp') }}" type="image/webp">
+                            <source srcset="{{ asset('images/home/about/home-aboutus.jpg') }}" type="image/jpeg">
+                            <img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+                                 data-src="{{ asset('images/home/about/home-aboutus.jpg') }}" alt="about popart" width="750" height="550">
+                        </picture>
+                    </div>
+                    <div class="container">
+                        <div class="section-content">
+                            <h2 class="section-title">
+                                <span class="rev-text temp-hide">Meet the people who admire pixels, flawless code and vast plains.</span></h2>
+                            <p class="section-subtitle">
+                                <span class="rev-text temp-hide">We would rather be thought of as a boutique of digital art than a factory which exceeds its capacity.</span>            </p>
+                            <p>
+                                <span class="rev-text temp-hide">PopArt Studio is a creative digital agency which focuses on design, development, and digital marketing, thus helping our clients to improve their business.</span>            </p>
+                            <div class="draggable-btn">
+                                <a class="x-btn load-cta" href="about_us.html" title="Learn more about Popart Studio"><span></span></a>
+                            </div>
+                        </div>
+                    </div>
+                </section><!-- .home-slide -->
+                <div id="hsclients" class="hs-clients home-slide scroll-show">
+                    <div class="container">
+                        <div class="section-content">
+                            <h3 class="section-title">Some of the incredible clients to whom we gave our best</h3>
+                            <ul id="clientslogo" class="clients-logo clear">
+                                <li data-delay="0">
+                                    <img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+                                         data-src="{{ asset('images/branding/clients/logo-ibm.svg') }}" alt="ibm">
+                                    <img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+                                         data-src="{{ asset('images/branding/clients/logo-decathlon.svg') }}" alt="decathlon">
+                                </li>
+                                <li data-delay="200">
+                                    <img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+                                         data-src="{{ asset('images/branding/clients/logo-opel.svg') }}" alt="opel">
+                                    <img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+                                         data-src="{{ asset('images/branding/clients/logo-ministarstvo-finansija-srbije.svg') }}" alt="ministry of finance">
+                                </li>
+                                <li data-delay="100">
+                                    <img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+                                         data-src="{{ asset('images/branding/clients/logo-nike.svg') }}" alt="nike">
+                                    <img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+                                         data-src="{{ asset('images/branding/clients/logo-linde.svg') }}" alt="linde">
+                                </li>
+                                <li data-delay="300">
+                                    <img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+                                         data-src="{{ asset('images/branding/clients/logo-schneider-electric.svg') }}" alt="schneider electric">
+                                    <img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+                                         data-src="{{ asset('images/branding/clients/logo-nis.svg') }}" alt="petroleum industry of serbia">
+                                </li>
+                                <li data-delay="400">
+                                    <img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+                                         data-src="{{ asset('images/branding/clients/logo-less-mills.svg') }}" alt="less mills">
+                                    <img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+                                         data-src="{{ asset('images/branding/clients/logo-visa.svg') }}" alt="visa nine">
+                                </li>
+                                <li data-delay="500">
+                                    <img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+                                         data-src="{{ asset('images/branding/clients/logo-lidl.svg') }}" alt="lidl">
+                                    <img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+                                         data-src="{{ asset('images/branding/clients/logo-omerica-organic.svg') }}" alt="omerica-organic">
+                                </li>
+                                <li data-delay="300">
+                                    <img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+                                         data-src="{{ asset('images/branding/clients/logo-schwarzkopf.svg') }}" alt="schwarzkopf">
+                                    <img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+                                         data-src="{{ asset('images/branding/clients/logo-gazprom.svg') }}" alt="gazprom neft">
+                                </li>
+                                <li data-delay="400">
+                                    <img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+                                         data-src="{{ asset('images/branding/clients/logo-erhmann.svg') }}" alt="erhmann">
+                                    <img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+                                         data-src="{{ asset('images/branding/clients/logo-spytech.svg') }}" alt="spytech">
+                                </li>
+                            </ul>
+
+                            <div class="draggable-btn">
+                                <a id="clogos-btn" class="x-btn load-cta" href="popart-clients.html"><span></span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- .home-slide -->
+                <div id="hstestimonials" class="hs-testimonials home-slide scroll-show">
+                    <div class="container">
+                        <div class="section-content clear">
+                            <h3 class="section-title">Testimonials</h3>
+                            <div class="testimonials-statistics">
+              <span class="ts-info">
+                <span class="ts-inc">8779</span>
+                <span>Clients</span>
+              </span>
+                                <span class="ts-info">
+                <span class="ts-inc">10127</span>
+                <span>Projects</span>
+              </span>
+                                <span class="ts-info">
+                <span>61</span>
+                <span>Countries</span>
+              </span>
+                            </div>
+                            <div class="testimonials-wrapper">
+                                <div class="single-testimonial">
+                                    <p>PopArt Studio brought our internal page closer to who we are as a company and community of young,
+                                        talented and intelligent people. They have first listened, then they gave us complete ideas, and they
+                                        continue to offer support. The end result is a graphically creative, professional and very user
+                                        friendly solution.</p>
+                                    <span>Sandra Lazić Kuzmanov, Hr Generalist, Schneider Electric DMS</span>
+                                </div>
+                                <div class="single-testimonial">
+                                    <p>Great team and support. We have been very demanding and PopArt has done a fantastic job.</p>
+                                    <span>Ryan Williams, AdvantageTec - San Francisco</span>
+                                </div>
+                                <div class="single-testimonial">
+                                    <p>Highly professional and thorough in their work, which is rarely seen today when there is a sea of
+                                        'agencies'. Even though we started working together only recently, I believe this will grow into a
+                                        long-term cooperation. Keep up the good work!</p>
+                                    <span>Biljana Smiljević, Daikin - Serbia</span>
+                                </div>
+                                <div class="single-testimonial">
+                                    <p>PopArt is a creative powerhouse in the beautiful city of Novi Sad. Check out their portfolio spanning
+                                        38 countries, and experience for yourself their incredible level of design standard.</p>
+                                    <span>Ken Soh - Singapore</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- .home-slide -->
+                <div id="hsawards" class="hs-awards home-slide scroll-show">
+                    <div class="container">
+                        <div class="section-content">
+                            <h3 class="section-title">Awards and nominations</h3>
+                            <ul class="clients-logo clear">
+                                <li><img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+                                         data-src="{{ asset('images/branding/awards/award-star.svg') }}" alt="award star"></li>
+                                <li><img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+                                         data-src="{{ asset('images/branding/awards/award-site-of-week.svg') }}" alt="awwwards site of the week"></li>
+                                <li><img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+                                         data-src="{{ asset('images/branding/awards/award-csswinner.svg') }}" alt="css winner"></li>
+                                <li><img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+                                         data-src="{{ asset('images/branding/awards/award-bestcss.svg') }}" alt="best css award"></li>
+                                <li><img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+                                         data-src="{{ asset('images/branding/awards/award-awwwards.svg') }}" alt="awwwards"></li>
+                                <li><img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+                                         data-src="{{ asset('images/branding/awards/award-fwa.svg') }}" alt="fwa"></li>
+                                <li><img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+                                         data-src="{{ asset('images/branding/awards/award-find.svg') }}" alt="award find"></li>
+                                <li><img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+                                         data-src="{{ asset('images/branding/awards/award-csslight.svg') }}" alt="css light"></li>
+                            </ul>
+
+                            <div class="draggable-btn">
+                                <a class="x-btn load-cta" href="media.html"><span></span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- .home-slide -->
+            </div>
+        </div><!-- .page-section -->
+
+        <section id="homeblog" class="home-blog page-section scroll-show clear hfeed">
+            <div class="container">
+                <h4 class="section-title"><span class="rev-text temp-hide">Newest blog posts</span></h4>
+                <span id="blog-arrows" class="custom-arrows">
+        <span class="ca ca-left">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+            <path d="M15.422 16.078l-1.406 1.406-6-6 6-6 1.406 1.406-4.594 4.594z" /></svg>
+        </span>
+        <span class="ca ca-right">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+            <path d="M8.578 16.359l4.594-4.594-4.594-4.594 1.406-1.406 6 6-6 6z" /></svg>
+        </span>
+      </span>
+            </div>
+            <div id="blog-slider" class="blog-wrapper">
+
+                <article class="single-post">
+                    <a href="popart_blog/en/2019/10/how-to-improve-your-online-business/" class="post-thumbnail">
+                        <picture>
+                            <source srcset="{{ asset('images/home/blog/online-business-eng.webp') }}" type="image/webp">
+                            <source srcset="{{ asset('images/home/blog/online-business-eng.jpg') }}" type="image/jpeg">
+                            <img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+                                 data-src="{{ asset('images/home/blog/online-business-eng.jpg') }}" alt="improve online business metrics"
+                                 title="How to improve your online business" width="450" height="500">
+                        </picture>
+                    </a>
+                    <span class="post-date">
+          <time>2019-10-08</time>
+        </span>
+                    <h3><a
+                                href="popart_blog/en/2019/10/how-to-improve-your-online-business/"><span class="rev-text temp-hide">How to improve your online business</span></a>
+                    </h3>
+                    <p>
+                        <span class="rev-text temp-hide">If you have set up your business, you probably already have a business website. In case you are in...</span>        </p>
+                </article><!-- .single-post -->
+
+                <article class="single-post">
+                    <a href="popart_blog/en/2019/01/web-design-trends-for-2019/" class="post-thumbnail">
+                        <picture>
+                            <source srcset="{{ asset('images/home/blog/web-design-trends-2019.webp') }}" type="image/webp">
+                            <source srcset="{{ asset('images/home/blog/web-design-trends-2019.jpg') }}" type="image/jpeg">
+                            <img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+                                 data-src="{{ asset('images/home/blog/web-design-trends-2019.jpg') }}" alt="web design trends"
+                                 title="Web design trends for 2019" width="450" height="500">
+                        </picture>
+                    </a>
+                    <span class="post-date">
+          <time>2019-01-31</time>
+        </span>
+                    <h3><a
+                                href="https://www.popwebdesign.net/popart_blog/en/2019/01/web-design-trends-for-2019/"><span class="rev-text temp-hide">Web design trends for 2019</span></a>
+                    </h3>
+                    <p>
+                        <span class="rev-text temp-hide">Web design has evolved quite a bit during previous years, don’t you think? It seems like we have enter...</span>        </p>
+                </article><!-- .single-post -->
+
+                <article class="single-post">
+                    <a href="popart_blog/en/2015/02/10-key-items-on-how-to-write-a-website-specification/" class="post-thumbnail">
+                        <picture>
+                            <source srcset="{{ asset('images/home/blog/10-website-spec.webp') }}" type="image/webp">
+                            <source srcset="{{ asset('images/home/blog/10-website-spec.jpg') }}" type="image/jpeg">
+                            <img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+                                 data-src="{{ asset('images/home/blog/10-website-spec.jpg') }}" alt="website specification"
+                                 title="10 Key Items on How to Write a Website Specification" width="450" height="500">
+                        </picture>
+                    </a>
+                    <span class="post-date">
+          <time>2015-02-13</time>
+        </span>
+                    <h3><a
+                                href="popart_blog/en/2015/02/10-key-items-on-how-to-write-a-website-specification/"><span class="rev-text temp-hide">10 Key Items on How to Write a Website Specification</span></a>
+                    </h3>
+                    <p>
+                        <span class="rev-text temp-hide">We know two different specification types, one is that client gives by ordering a new web project...</span>        </p>
+                </article><!-- .single-post -->
+
+                <article class="single-post">
+                    <a href="popart_blog/en/2016/10/slider-design-best-practices/" class="post-thumbnail">
+                        <picture>
+                            <source srcset="{{ asset('images/home/blog/slider-design.webp') }}" type="image/webp">
+                            <source srcset="{{ asset('images/home/blog/slider-design.jpg') }}" type="image/jpeg">
+                            <img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+                                 data-src="{{ asset('images/home/blog/slider-design.jpg') }}" alt="slider design principles"
+                                 title="Slider design: best practices" width="450" height="500">
+                        </picture>
+                    </a>
+                    <span class="post-date">
+          <time>2016-10-03</time>
+        </span>
+                    <h3><a
+                                href="popart_blog/en/2016/10/slider-design-best-practices/"><span class="rev-text temp-hide">Slider design: best practices</span></a>
+                    </h3>
+                    <p>
+                        <span class="rev-text temp-hide write-all">Slider design has become a massively popular practice in the world of web design...</span>        </p>
+                </article><!-- .single-post -->
+
+                <article class="single-post">
+                    <a href="popart_blog/en/2017/09/create-multilingual-wordpress-website/" class="post-thumbnail">
+                        <picture>
+                            <source srcset="{{ asset('images/home/blog/multilingual-wordpress-website.webp') }}" type="image/webp">
+                            <source srcset="{{ asset('images/home/blog/multilingual-wordpress-website.jpg') }}" type="image/jpeg">
+                            <img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+                                 data-src="{{ asset('images/home/blog/multilingual-wordpress-website.jpg') }}" alt="multilingual wordpress website"
+                                 title="How to create a multilingual WordPress website" width="450" height="500">
+                        </picture>
+                    </a>
+                    <span class="post-date">
+          <time>2017-09-21</time>
+        </span>
+                    <h3><a
+                                href="popart_blog/en/2017/09/create-multilingual-wordpress-website/"><span class="rev-text temp-hide">How to create a multilingual WordPress website</span></a>
+                    </h3>
+                    <p>
+                        <span class="rev-text temp-hide">So, you (or your clients) have decided to hit the global market and translate your website into different languages...</span>        </p>
+                </article><!-- .single-post -->
+
+            </div>
+            <div class="container">
+                <div class="draggable-btn">
+                    <a class="x-btn" href="https://www.popwebdesign.net/popart_blog/en/" title="Popart Blog"><span></span></a>
+                </div>
+            </div>
+        </section><!-- .page-section -->
+    </main>
+{% endblock %}
+
+{% block banner %}
+    <div id="banner" class="home-banner page-banner">
+        <span class="lines l-header"></span><!-- lines -->
+        <span class="lines l-horizontal"><span></span><span></span></span><!-- lines -->
+        <div class="banner-object has-video home-layer-banner visible" data-video="banner-home">
+            <div>
+                <video muted id="home-banner-bg" class="header-video">
+                    <source src="{{ asset('images/home/slider/samurai.webm') }}" type="video/webm">
+                    <source src="{{ asset('images/home/slider/samurai.mp4') }}" type="video/mp4">
+                </video>
+            </div>
+        </div>
+        <div class="banner-inner container">
+            <div class="banner-caption">
+                <span class="bigletter animate-bigletter">W</span>
+                <h1><span class="rev-text-wrap"><span class="rev-text temp-hide" data-rev-delay="300">Web design and</span></span><span class="rev-text-wrap"><span class="rev-text temp-hide" data-rev-delay="600"> development</span></span><span class="rev-text-wrap"><span class="rev-text temp-hide" data-rev-delay="900">full-service agency</span></span></h1>
+            </div>
+        </div>
+        <div class="info-buttons-wrapper">
+            <div id="baner-links" class="container">
+                <a href="portfolio-popart-studio-eng.html" class="popart-btn load-cta" title="See our portfolio">Portfolio</a>
+                <a href="order.html" class="popart-btn">Order</a>
+            </div>
+        </div><!-- #info-buttons -->
+        <span class="lines l-header sep-line"></span><!-- lines -->
+        <span class="lines l-horizontal sep-line"><span></span><span></span></span><!-- lines -->
+    </div>
+{% endblock %}
+
+
+{% block newsletter %}
+    <div id="sidebar" class="sidebar side-nav">
+        <div id="side-nav" class="fixed-nav">
+            <h3>Internet marketing</h3>
+            <ul>
+                <li><a href="digital-marketing.html" title="Digital marketing services"><span>Digital marketing</span></a></li>
+                <li><a href="search-engine-optimization.html" title="Sarch engine website optimization"><span>SEO optimization</span></a></li>
+                <li><a href="pay-per-click-advertising.html" title="PPC Advertising"><span>PPC Advertising</span></a></li>
+            </ul>
+
+            <h4>Share this page</h4>
+            <div class="nav-social no-delay">
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.popwebdesign.net/internet-marketing-eng.html" target="_blank" class="social-share-link" style="transition-delay: 0.9s;" rel="nofollow noreferrer noopener">
+            		<span>
+            			<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+            				<path fill="#fff" d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"></path>
+            			</svg>
+            		</span>
+                </a>
+                <a href="https://twitter.com/share?url=https://www.popwebdesign.net/internet-marketing-eng.html" target="_blank" class="social-share-link" style="transition-delay: 0.95s;" rel="nofollow noreferrer noopener">
+            		<span>
+            			<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+            				<path fill="#fff" d="M32 7.075a12.941 12.941 0 0 1-3.769 1.031 6.601 6.601 0 0 0 2.887-3.631 13.21 13.21 0 0 1-4.169 1.594A6.565 6.565 0 0 0 22.155 4a6.563 6.563 0 0 0-6.563 6.563c0 .512.056 1.012.169 1.494A18.635 18.635 0 0 1 2.23 5.195a6.56 6.56 0 0 0-.887 3.3 6.557 6.557 0 0 0 2.919 5.463 6.565 6.565 0 0 1-2.975-.819v.081a6.565 6.565 0 0 0 5.269 6.437 6.574 6.574 0 0 1-2.968.112 6.588 6.588 0 0 0 6.131 4.563 13.17 13.17 0 0 1-9.725 2.719 18.568 18.568 0 0 0 10.069 2.95c12.075 0 18.681-10.006 18.681-18.681 0-.287-.006-.569-.019-.85A13.216 13.216 0 0 0 32 7.076z"></path>
+            			</svg>
+            		</span>
+                </a>
+                <a href="https://pinterest.com/pin/create/button/?url=&media=https://www.popwebdesign.net/internet-marketing-eng.html" target="_blank" class="social-share-link" style="transition-delay: 1s;" rel="nofollow noreferrer noopener">
+            		<span>
+            			<svg width="17" height="21" viewBox="0 0 17 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+            				<path d="M14.6181 2.14083C13.1684 0.752119 11.17 -0.0065918 8.98194 -0.0065918C5.64226 -0.0065918 3.5829 1.3618 2.45161 2.51341C1.04935 3.92922 0.25 5.81244 0.25 7.66857C0.25 10.0057 1.22548 11.8008 2.86484 12.4715C2.97323 12.5189 3.08839 12.5392 3.19677 12.5392C3.54226 12.5392 3.81323 12.3157 3.90806 11.9499C3.96226 11.7399 4.09097 11.2318 4.14516 11.0082C4.2671 10.5679 4.16548 10.3579 3.90806 10.0531C3.43387 9.49083 3.2171 8.82696 3.2171 7.96664C3.2171 5.40599 5.12742 2.68276 8.66355 2.68276C11.4681 2.68276 13.209 4.2747 13.209 6.84212C13.209 8.46115 12.8635 9.96502 12.2268 11.0624C11.7865 11.8279 11.0142 12.7424 9.82194 12.7424C9.3071 12.7424 8.84645 12.5324 8.55516 12.1599C8.27742 11.8144 8.18936 11.3605 8.29774 10.8931C8.41968 10.3647 8.59581 9.80922 8.75839 9.28083C9.05645 8.30534 9.34097 7.38405 9.34097 6.65244C9.34097 5.39244 8.56871 4.55244 7.4171 4.55244C5.95387 4.55244 4.80903 6.03599 4.80903 7.93276C4.80903 8.86083 5.0529 9.55857 5.16807 9.82276C4.98516 10.6018 3.88774 15.2421 3.68452 16.116C3.56258 16.6241 2.84452 20.6547 4.03677 20.9799C5.38484 21.3321 6.59065 17.4031 6.71258 16.9628C6.81419 16.6037 7.15968 15.2353 7.36968 14.4021C8.02 15.0253 9.06323 15.4521 10.0794 15.4521C11.9965 15.4521 13.7171 14.5918 14.9297 13.027C16.1084 11.5095 16.7519 9.38921 16.7519 7.06567C16.7587 5.24341 15.9729 3.44825 14.6181 2.14083V2.14083Z" fill="#fff"></path>
+            			</svg>
+            		</span>
+                </a>
+                <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://www.popwebdesign.net/internet-marketing-eng.html" target="_blank" class="social-share-link" style="transition-delay: 1.05s;" rel="nofollow noreferrer noopener">
+            		<span>
+            			<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+            				<path fill="#fff" d="M12 12h5.535v2.837h.079c.77-1.381 2.655-2.837 5.464-2.837C28.92 12 30 15.637 30 20.367V30h-5.769v-8.54c0-2.037-.042-4.657-3.001-4.657-3.005 0-3.463 2.218-3.463 4.509V30H12V12zM2 12h6v18H2V12zm6-5a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"></path>
+            			</svg>
+            		</span>
+                </a>
+            </div>
+        </div>
+    </div>
+{% endblock %}

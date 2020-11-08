@@ -1,0 +1,261 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}Hello IndexController!{% endblock %}
+
+{% block content %}
+    <main id="main" class="site-main about-us">
+        <span class="l-horizontal"><span></span><span></span></span><!-- lines -->
+
+        <div class="content-shorten page-section section-top">
+            <div class="container">
+                <div class="section-content">
+                    <h2 class="section-title"><span class="rev-text temp-hide">Our story</span></h2>
+                    <p><span class="rev-text temp-hide">Our biggest asset are people - intelligent, creative, smiling individuals. We gather people with different personalities, dreams, interests, expectations, but with one same goal. Our colleagues create a specific company culture.</span></p>
+                    <p><span class="rev-text temp-hide">PopArt Studio is a Serbia-based creative digital agency specialized in web and graphic design, development and improving our clients digital business. We prefer being thought of as a boutique of digital art rather than a factory which exceeds its capacity. We do not aim at mass production but approach every client with a personalized and professional side.</span></p>
+                    <p><span class="rev-text temp-hide">We are united by a vision of developing a creative playground where everything seems possible.</span></p>
+                </div>
+            </div>
+        </div><!-- .page-section -->
+
+        <div class="content-divide page-section">
+            <div class="container-fluid reverse-container">
+                <div id="about-slide-video" class="section-image">
+                    <img src="{{ asset('images/branding/o-nama/popart-studio.png') }}" alt="popart studio" width="963" height="712">
+                </div>
+                <div class="section-content">
+                    <div class="testimonials-statistics about-testimonials">
+						<span class="ts-info">
+							<span class="ts-inc">8780</span>
+							<span>Clients</span>
+						</span>
+                        <span class="ts-info">
+							<span class="ts-inc">10128</span>
+							<span>Projects</span>
+						</span>
+                        <span class="ts-info">
+							<span>61</span>
+							<span>Countries</span>
+						</span>
+                    </div>
+                </div>
+            </div>
+        </div><!-- .page-section -->
+
+        <div class="clients-slider page-section">
+            <div class="clients-slide">
+                <div class="section-content">
+                    <div class="container">
+                        <div class="head-clients has-parallax scroll-show">
+                            <h2 class="section-title"><span class="rev-text temp-hide">Some of the incredible clients to whom we gave our best.</span></h2>
+                            <span class="bigletter animate-bigletter">C</span>
+                        </div>
+                    </div>
+                    <ul id="clientslogo" class="clients-logo clients-logo-onama clear">
+                        <li data-delay="0">
+                            <img src="{{ asset('images/branding/clients/logo-politika.svg') }}" alt="logo politika">
+                            <img src="{{ asset('images/branding/clients/logo-decathlon.svg') }}" alt="logo decathlon">
+                        </li>
+                        <li data-delay="200">
+                            <img src="{{ asset('images/branding/clients/logo-opel.svg') }}" alt="opel logo">
+                            <img src="{{ asset('images/branding/clients/logo-less-mills.svg') }}" alt="logo less mills">
+                        </li>
+                        <li data-delay="100">
+                            <img src="{{ asset('images/branding/clients/logo-nike.svg') }}" alt="nike logo">
+                            <img src="{{ asset('images/branding/clients/logo-apr.svg') }}" alt="apr logo">
+                        </li>
+                        <li data-delay="300">
+                            <img src="{{ asset('images/branding/clients/logo-schneider-electric.svg') }}" alt="schneider electric logo">
+                            <img src="{{ asset('images/branding/clients/logo-entjuba.svg') }}" alt="entjuba logo">
+                        </li>
+                        <li data-delay="400">
+                            <img src="{{ asset('images/branding/clients/logo-rt-rk.svg') }}" alt="iwedia rt-rk logo">
+                            <img src="{{ asset('images/branding/clients/logo-planet-bike.svg') }}" alt="planet bike logo">
+                        </li>
+                        <li data-delay="500">
+                            <img src="{{ asset('images/branding/clients/logo-linde.svg') }}" alt="linde logo">
+                            <img src="{{ asset('images/branding/clients/logo-omerica-organic.svg') }}" alt="omerica organic logo">
+                        </li>
+                        <li data-delay="300">
+                            <img src="{{ asset('images/branding/clients/logo-schwarzkopf.svg') }}" alt="schwarzkopf logo">
+                            <img src="{{ asset('images/branding/clients/logo-alma-quattro.svg') }}" alt="alma-quattro logo">
+                        </li>
+                        <li data-delay="400">
+                            <img src="{{ asset('images/branding/clients/logo-codecentric.svg') }}" alt="codecentric logo">
+                            <img src="{{ asset('images/branding/clients/logo-ministarstvo-finansija-srbije.svg') }}" alt="ministry of finance">
+                        </li>
+                        <li data-delay="300">
+                            <img src="{{ asset('images/branding/clients/logo-ibm.svg') }}" alt="ibm logo">
+                            <img src="{{ asset('images/branding/clients/logo-bayn.svg') }}" alt="bayn">
+                        </li>
+                        <li data-delay="400">
+                            <img src="{{ asset('images/branding/clients/logo-lidl.svg') }}" alt="lidl logo">
+                            <img src="{{ asset('images/branding/clients/logo-daikin.svg') }}" alt="daikin">
+                        </li>
+                        <li data-delay="500">
+                            <img src="{{ asset('images/branding/clients/logo-dis.svg') }}" alt="dis logo">
+                            <img src="{{ asset('images/branding/clients/logo-gazprom.svg') }}" alt="gazprom">
+                        </li>
+                        <li data-delay="300">
+                            <img src="{{ asset('images/branding/clients/logo-erhmann.svg') }}" alt="erhmann logo">
+                            <img src="{{ asset('images/branding/clients/logo-gastrans.svg') }}" alt="gastrans">
+                        </li>
+                        <li data-delay="400">
+                            <img src="{{ asset('images/branding/clients/logo-termovent.svg') }}" alt="termovent logo">
+                            <img src="{{ asset('images/branding/clients/logo-levi-nine.svg') }}" alt="levi nine">
+                        </li>
+                        <li data-delay="300">
+                            <img src="{{ asset('images/branding/clients/logo-matijevic.svg') }}" alt="matijevic logo">
+                            <img src="{{ asset('images/branding/clients/logo-localist.svg') }}" alt="localist">
+                        </li>
+                        <li data-delay="400">
+                            <img src="{{ asset('images/branding/clients/logo-pepsi.svg') }}" alt="pepsi">
+                            <img src="{{ asset('images/branding/clients/logo-spytech.svg') }}" alt="spytech">
+                        </li>
+                        <li data-delay="500">
+                            <img src="{{ asset('images/branding/clients/logo-porcelanosa.svg') }}" alt="porcelanosa">
+                            <img src="{{ asset('images/branding/clients/logo-nis.svg') }}" alt="petroleum industry of serbia">
+                        </li>
+                        <li data-delay="300">
+                            <img src="{{ asset('images/branding/clients/logo-world-class.svg') }}" alt="world class logo">
+                            <img src="{{ asset('images/branding/clients/logo-zeder.svg') }}" alt="zeder">
+                        </li>
+                        <li data-delay="400">
+                            <img src="{{ asset('images/branding/clients/logo-visa.svg') }}" alt="visa logo">
+                            <img src="{{ asset('images/branding/clients/logo-ibm.svg') }}" alt="ibm logo">
+                        </li>
+                    </ul>
+
+                    <div class="draggable-btn">
+                        <a id="clogos-btn" class="x-btn load-cta" href="popart-clients.html" title="Our clients"><span></span></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="about-section-images page-section portfolio-section clear" data-category="logo-design">
+                <div class="container">
+                    <a href="javascript:;" class="singe-portfolio about-image">
+                        <figure class="portfolio-img section-image">
+                            <img src="{{ asset('images/branding/o-nama/slika-1.jpg') }}" alt="popart team conference" width="378" height="521">
+                        </figure>
+                    </a>
+                    <a href="javascript:;" class="singe-portfolio about-image">
+                        <figure class="portfolio-img section-image">
+                            <img src="{{ asset('images/branding/o-nama/slika-2.jpg') }}" alt="popart team conference" width="650" height="425">
+                        </figure>
+                    </a>
+                    <a href="javascript:;" class="singe-portfolio about-image">
+                        <figure class="portfolio-img section-image">
+                            <img src="{{ asset('images/branding/o-nama/slika-3.jpg') }}" alt="popart team conference" width="335" height="401">
+                        </figure>
+                    </a>
+                    <a href="javascript:;" class="singe-portfolio about-image">
+                        <figure class="portfolio-img section-image">
+                            <img src="{{ asset('images/branding/o-nama/slika-4.jpg') }}" alt="popart team conference" width="463" height="438">
+                        </figure>
+                    </a>
+                    <a href="javascript:;" class="singe-portfolio about-image">
+                        <figure class="portfolio-img section-image">
+                            <img src="{{ asset('images/branding/o-nama/slika-5.jpg') }}" alt="popart team conference" width="650" height="432">
+                        </figure>
+                    </a>
+                </div>
+            </div><!-- .page-section -->
+
+            <div class="clients-slider awards-section page-section">
+                <div class="clients-slide">
+                    <div class="container">
+                        <div class="section-content">
+                            <div class="head-clients has-parallax scroll-show">
+                                <h2 class="section-title"><span class="rev-text temp-hide">Awards and nominations</span></h2>
+                                <span class="bigletter animate-bigletter">A</span>
+                            </div>
+                            <div class="clients-logos-wrapper">
+                                <ul class="clients-logo clients-logo-onama clear">
+                                    <li><img src="{{ asset('images/branding/awards/award-star.svg') }}" alt="award star"></li>
+                                    <li><img src="{{ asset('images/branding/awards/award-site-of-week.svg') }}" alt="awwwards site of the week"></li>
+                                    <li><img src="{{ asset('images/branding/awards/award-csswinner.svg') }}" alt="csswinner"></li>
+                                    <li><img src="{{ asset('images/branding/awards/award-bestcss.svg') }}" alt="bestcss"></li>
+                                    <li><img src="{{ asset('images/branding/awards/award-awwwards.svg') }}" alt="awwwards"></li>
+                                    <li><img src="{{ asset('images/branding/awards/award-fwa.svg') }}" alt="fwa"></li>
+                                    <li><img src="{{ asset('images/branding/awards/award-find.svg') }}" alt="award find"></li>
+                                    <li><img src="{{ asset('images/branding/awards/award-csslight.svg') }}" alt="csslight"></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+{% endblock %}
+
+{% block banner %}
+    <div id="banner" class="inner-page-banner page-banner">
+        <span class="lines l-header"></span><!-- lines -->
+        <span class="lines l-horizontal"><span></span><span></span></span><!-- lines -->
+        <div class="banner-object">
+            <img src="{{ asset('images/branding/graphics/about-us.png') }}" alt="about popart" width="953" height="703">
+        </div>
+        <div class="banner-inner container">
+            <div class="banner-caption">
+                <span class="bigletter animate-bigletter">A</span>
+                <h1><span class="rev-text temp-hide">About Us</span></h1>
+                <h2><span class="rev-text-wrap"><span class="rev-text temp-hide" data-rev-delay="300">Meet people who admire pixels,</span></span><span class="rev-text-wrap"><span class="rev-text temp-hide" data-rev-delay="600"> flawless code and vast plains.</span></span></h2>
+            </div>
+        </div>
+        <div class="info-buttons-wrapper clear">
+            <div class="container">
+                <a href="portfolio-popart-studio-eng.html" class="popart-btn load-cta" title="See our portfolio">Portfolio</a>
+                <a href="order.html?f=web" class="popart-btn" data-form="order-form" data-btn-type="open-form">Order</a>
+            </div>
+        </div><!-- #info-buttons -->
+        <span class="lines l-header sep-line"></span><!-- lines -->
+        <span class="lines l-horizontal sep-line"><span></span><span></span></span><!-- lines -->
+    </div>
+{% endblock %}
+
+
+{% block newsletter %}
+    <div id="sidebar" class="sidebar side-nav">
+        <div id="side-nav" class="fixed-nav">
+            <h3>Internet marketing</h3>
+            <ul>
+                <li><a href="digital-marketing.html" title="Digital marketing services"><span>Digital marketing</span></a></li>
+                <li><a href="search-engine-optimization.html" title="Sarch engine website optimization"><span>SEO optimization</span></a></li>
+                <li><a href="pay-per-click-advertising.html" title="PPC Advertising"><span>PPC Advertising</span></a></li>
+            </ul>
+
+            <h4>Share this page</h4>
+            <div class="nav-social no-delay">
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.popwebdesign.net/internet-marketing-eng.html" target="_blank" class="social-share-link" style="transition-delay: 0.9s;" rel="nofollow noreferrer noopener">
+            		<span>
+            			<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+            				<path fill="#fff" d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"></path>
+            			</svg>
+            		</span>
+                </a>
+                <a href="https://twitter.com/share?url=https://www.popwebdesign.net/internet-marketing-eng.html" target="_blank" class="social-share-link" style="transition-delay: 0.95s;" rel="nofollow noreferrer noopener">
+            		<span>
+            			<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+            				<path fill="#fff" d="M32 7.075a12.941 12.941 0 0 1-3.769 1.031 6.601 6.601 0 0 0 2.887-3.631 13.21 13.21 0 0 1-4.169 1.594A6.565 6.565 0 0 0 22.155 4a6.563 6.563 0 0 0-6.563 6.563c0 .512.056 1.012.169 1.494A18.635 18.635 0 0 1 2.23 5.195a6.56 6.56 0 0 0-.887 3.3 6.557 6.557 0 0 0 2.919 5.463 6.565 6.565 0 0 1-2.975-.819v.081a6.565 6.565 0 0 0 5.269 6.437 6.574 6.574 0 0 1-2.968.112 6.588 6.588 0 0 0 6.131 4.563 13.17 13.17 0 0 1-9.725 2.719 18.568 18.568 0 0 0 10.069 2.95c12.075 0 18.681-10.006 18.681-18.681 0-.287-.006-.569-.019-.85A13.216 13.216 0 0 0 32 7.076z"></path>
+            			</svg>
+            		</span>
+                </a>
+                <a href="https://pinterest.com/pin/create/button/?url=&media=https://www.popwebdesign.net/internet-marketing-eng.html" target="_blank" class="social-share-link" style="transition-delay: 1s;" rel="nofollow noreferrer noopener">
+            		<span>
+            			<svg width="17" height="21" viewBox="0 0 17 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+            				<path d="M14.6181 2.14083C13.1684 0.752119 11.17 -0.0065918 8.98194 -0.0065918C5.64226 -0.0065918 3.5829 1.3618 2.45161 2.51341C1.04935 3.92922 0.25 5.81244 0.25 7.66857C0.25 10.0057 1.22548 11.8008 2.86484 12.4715C2.97323 12.5189 3.08839 12.5392 3.19677 12.5392C3.54226 12.5392 3.81323 12.3157 3.90806 11.9499C3.96226 11.7399 4.09097 11.2318 4.14516 11.0082C4.2671 10.5679 4.16548 10.3579 3.90806 10.0531C3.43387 9.49083 3.2171 8.82696 3.2171 7.96664C3.2171 5.40599 5.12742 2.68276 8.66355 2.68276C11.4681 2.68276 13.209 4.2747 13.209 6.84212C13.209 8.46115 12.8635 9.96502 12.2268 11.0624C11.7865 11.8279 11.0142 12.7424 9.82194 12.7424C9.3071 12.7424 8.84645 12.5324 8.55516 12.1599C8.27742 11.8144 8.18936 11.3605 8.29774 10.8931C8.41968 10.3647 8.59581 9.80922 8.75839 9.28083C9.05645 8.30534 9.34097 7.38405 9.34097 6.65244C9.34097 5.39244 8.56871 4.55244 7.4171 4.55244C5.95387 4.55244 4.80903 6.03599 4.80903 7.93276C4.80903 8.86083 5.0529 9.55857 5.16807 9.82276C4.98516 10.6018 3.88774 15.2421 3.68452 16.116C3.56258 16.6241 2.84452 20.6547 4.03677 20.9799C5.38484 21.3321 6.59065 17.4031 6.71258 16.9628C6.81419 16.6037 7.15968 15.2353 7.36968 14.4021C8.02 15.0253 9.06323 15.4521 10.0794 15.4521C11.9965 15.4521 13.7171 14.5918 14.9297 13.027C16.1084 11.5095 16.7519 9.38921 16.7519 7.06567C16.7587 5.24341 15.9729 3.44825 14.6181 2.14083V2.14083Z" fill="#fff"></path>
+            			</svg>
+            		</span>
+                </a>
+                <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://www.popwebdesign.net/internet-marketing-eng.html" target="_blank" class="social-share-link" style="transition-delay: 1.05s;" rel="nofollow noreferrer noopener">
+            		<span>
+            			<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+            				<path fill="#fff" d="M12 12h5.535v2.837h.079c.77-1.381 2.655-2.837 5.464-2.837C28.92 12 30 15.637 30 20.367V30h-5.769v-8.54c0-2.037-.042-4.657-3.001-4.657-3.005 0-3.463 2.218-3.463 4.509V30H12V12zM2 12h6v18H2V12zm6-5a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"></path>
+            			</svg>
+            		</span>
+                </a>
+            </div>
+        </div>
+    </div>
+{% endblock %}

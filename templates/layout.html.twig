@@ -1,0 +1,101 @@
+{# templates/blog/layout.html.twig #}
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+
+    <!-- <link rel="dns-prefetch" href="css/font.css"> -->
+    <!-- <link rel="preconnect" href="https://fonts.gstatic.com"> -->
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playfair+Display%7CPoppins:300,400,500,600,700"> -->
+    <!-- <link rel="prefetch" href="css/icomoon/icomoon.woff" type="font/woff"> -->
+    <!-- <link rel="prefetch" href="css/icomoon/icomoon.ttf" type="font/ttf"> -->
+    <!-- <link rel="prefetch" href="css/icomoon/icomoon.eot" type="font/ttf"> -->
+    <link rel="preload" href="{{ asset('fonts/Poppins/Poppins-Bold.ttf') }}" type="font/ttf" as="font" crossorigin="anonymous" />
+    <link rel="preload" href="{{ asset('fonts/PlayfairDisplay/PlayfairDisplay-Regular.ttf') }}" type="font/ttf" as="font" crossorigin="anonymous" />
+    <link rel="preload" href="{{ asset('assets/icons/icomoon.woff2?v=2019.10.29145221') }}" type="font/woff2" as="font" crossorigin="anonymous" />
+    <link rel="preload" href="{{ asset('fonts/Poppins/Poppins-Regular.ttf') }}" type="font/ttf" as="font" crossorigin="anonymous" />
+    <link rel="stylesheet" href="{{ asset('css/slick.css') }}" type="text/css" media="all" />
+    <!--<link rel="stylesheet" href="{{ asset('css/jquery-ui.min.css') }}" type="text/css" media="all">&lt;!&ndash; team page only &ndash;&gt;-->
+    <link rel="stylesheet" href="{{ asset('css/main.css') }}" type="text/css" media="all" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"></script>
+
+    <script type="application/ld+json">
+        {
+            "@context": "http://schema.org",
+            "@type": "WebSite",
+            "@id": "https://www.popwebdesign.net/#website",
+            "url": "https://www.popwebdesign.net/",
+            "name": "PopArt Studio",
+            "headline": "Web design and development services, branding",
+            "description": "PopArt Studio – an award winning web design agency. We offer quality, professional web design, graphic design, web development and branding services.",
+            "inLanguage": "en-US",
+            "copyrightHolder": {
+                "@type": "Organization",
+                "@id": "https://www.popwebdesign.net/#organization",
+                "url": "https://www.popwebdesign.net/",
+                "name": "PopArt Studio"
+            },
+            "copyrightYear": "2020",
+            "creator": {
+                "@type": "Organization",
+                "@id": "https://www.popwebdesign.net/#organization",
+                "url": "https://www.popwebdesign.net/",
+                "name": "PopArt Studio"
+            },
+            "potentialAction": {
+                "@type": "SearchAction",
+                "target": {
+                    "@type": "EntryPoint",
+                    "urlTemplate": "https://www.popwebdesign.net/?s={search_term_string}"
+                },
+                "query-input": {
+                    "@type": "PropertyValueSpecification",
+                    "valueRequired": "http://schema.org/True",
+                    "valueName": "search_term_string"
+                }
+            }
+        }
+    </script>
+{% endblock %}
+
+{% block body %}
+
+    {{ include('index/_parts/site_header.html.twig') }}
+
+    {% block banner %}{% endblock %} <!-- #banner -->
+
+    {% block content %}{% endblock %}<!-- #content -->
+
+    {% block sidebar %}{% endblock %}<!-- #sidebar -->
+
+    {% block newsletter %}{% endblock %}<!-- #newsletter -->
+
+
+    {{ include('index/_parts/newsletter_subscribe.html.twig') }}
+    {{ include('index/_parts/footer.html.twig') }}
+
+{% endblock %}
+
+{% block javascripts %}
+    <script src="{{ asset('js/plugins/TweenMax.min.js') }}">
+    </script>
+    <script src="{{ asset('js/plugins/ScrollMagic.min.js') }}">
+    </script>
+    <script src="{{ asset('js/plugins/animation.gsap.min.js') }}">
+    </script>
+
+    <script src="{{ asset('js/plugins/vivus.min.js') }}">
+    </script>
+    <script src="{{ asset('js/plugins/scrollspy.bootstrap.min.js') }}">
+    </script>
+    <script src="{{ asset('js/plugins/slick.min.js') }}">
+    </script> <!-- ONLY INDEX PLUGIN -->
+
+    <script src="{{ asset('js/pages-js/index.js') }}">
+    </script> <!-- ONLY INDEX PLUGIN END -->
+    <!-- PLUGIN FOR ALL PAGES -->
+
+{#    <script src="{{ asset('js/pages-js/order-form.js') }}" defer></script>#}
+    <script src="{{ asset('js/pages-js/all-pages.js') }}">
+    </script> <!-- PLUGIN FOR ALL PAGES END --><!-- #mastfoot -->
+{% endblock %}
